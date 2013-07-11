@@ -36,7 +36,7 @@ else
 fi
 
 echo "We need to log into $hostname as $username to set up your public key (hopefully last time you'll use password from this computer)" 
-cat "$path/$filename.pub" | ssh "$hostname" -l "$username" '[ -d .ssh ] || mkdir .ssh; cat >> .ssh/authorized_keys; chmod 700 ~/.ssh; chmod 600 ~/.ssh/authorized_keys'
+cat "$path/$filename.pub" | ssh "$hostname" -l "$username" '[ -d .ssh ] || mkdir .ssh; cat >> .ssh/authorized_keys2; chmod 700 ~/.ssh; chmod 600 ~/.ssh/authorized_keys2'
 status=$?
 
 if [ $status -eq 0 ]
